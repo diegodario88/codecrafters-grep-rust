@@ -19,7 +19,6 @@ fn match_pattern(input_line: &str, pattern: Pattern) -> bool {
             let group_without_brackets = s.trim_start_matches('[').trim_end_matches(']');
 
             // Handle negative character groups (denoted by a leading '^' character).
-            // If the group is negative, then return true only if the input_line does not contain any of the characters in the group.
             if group_without_brackets.starts_with('^') {
                 group_without_brackets
                     .chars()
